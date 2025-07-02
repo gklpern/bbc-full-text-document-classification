@@ -19,12 +19,12 @@ The goal of this work is to implement a parameter-efficient document classificat
 - Basic exploratory data analysis was performed, including class distributions and length-based text statistics.
 - A custom normalization function was applied to clean and prepare the text data.
 - A LoRA configuration was defined with:
-  - `r = 8`
-  - `lora_alpha = 16`
-  - `lora_dropout = 0.1`
+  - `r = 16`
+  - `lora_alpha = 32`
+  - `lora_dropout = 0.2`
   - `task_type = sequence classification`
 - The model was trained using the `transformers` and `peft` libraries on the BBC dataset for 8 epochs.
-- Fine-tuning was done using PyTorch on GPU with the `bert-base-cased` model achieving the best validation accuracy of **0.878**.
+- Fine-tuning was done using PyTorch on GPU with the `bert-base-cased` model achieving the best validation accuracy of **0.964**.
 - Results indicate that higher accuracy is achievable with more computational resources, longer training, or optimized hyperparameters.
 
 ## Data
